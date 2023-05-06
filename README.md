@@ -1,6 +1,6 @@
 # latex-omml
 
-将latex公式转为omml，经过处理可以直接插入word文档中
+将latex公式转为omml，经过处理可以直接插入word文档中，此工具生成的公式不是图片，是直接可以在word编辑的
 
 ### 原作者
 
