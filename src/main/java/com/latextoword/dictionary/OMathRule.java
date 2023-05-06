@@ -511,6 +511,8 @@ public  enum OMathRule {
 	_AACUTE(2155,"&aacute;",new Atom(2155,"<m:r><m:t>á</m:t></m:r>"),0),
 	_ORDM(2156,"&ordm;",new Atom(2156,"<m:r><m:t>°</m:t></m:r>"),0),
 	_VARSUBSETNEQQ(2157,"\\varsubsetneqq",new Atom(2157,"<m:r><m:t>&#x2ACB;</m:t></m:r>"),0),
+	_EXISTS(2158,"\\exists",new Atom(2158,"<m:r><m:t>&#x2203;</m:t></m:r>"),0),
+	_NEXISTS(2159,"\\nexists",new Atom(2159,"<m:r><m:t>&#x2204;</m:t></m:r>"),0),
 
 	;
 	private Integer  oMathId;
