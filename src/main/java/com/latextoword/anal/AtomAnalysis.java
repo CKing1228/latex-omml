@@ -270,7 +270,6 @@ public class AtomAnalysis {
                              Atom atomNextNew= MyJsonUtil.fromJson(MyJsonUtil.toJson(atomNextTmp), Atom.class);
 						 	 if(blockStep==atoms.size()){
                                  message=atomToOMathAtomALL(innnerBlockAtomList);
-								 System.out.println(MyJsonUtil.toJson(innnerBlockAtomList));
                                  if(!message.equals("SUCCESS")) return message;
                                  for(Atom blockAtom:innnerBlockAtomList){
                                      AtomBE atomNextBENew=new AtomBE(null, blockAtom,null);

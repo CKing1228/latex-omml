@@ -347,10 +347,6 @@ public class AtomToOMath {
 		return atomBeginEndStr;
 	}
 
-	/*public static void main(String[] args) {
-		String ll="<m:oMath><m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><w:rPr><w:rFonts w:ascii=\"Times New Roman\" w:hAnsi=\"Times New Roman\" w:cs=\"Times New Roman\"/></w:rPr><m:t>a</m:t></m:r><m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t> </m:t> </m:r><m:r><m:t>\u200B毛\u200Bmol</m:t></m:r><m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t> </m:t> </m:r><m:r><m:t>瑞瑞P</m:t></m:r><m:sSub><m:e><m:r><m:t>\u200BH</m:t></m:r></m:e><m:sub><m:r><m:t>4</m:t></m:r></m:sub></m:sSub><m:r><m:t>I</m:t> </m:r></m:oMath>";
-		System.out.println(atomNameStandardized(ll));
-	}*/
 
 
 }

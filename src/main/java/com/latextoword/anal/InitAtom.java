@@ -42,7 +42,6 @@ private static Hashtable<String, AtomChar> atomCharMap;
             latex=blockAtomAddBrace(latex,beginRegex,0);
             latex=blockAtomAddBrace(latex,endRegex,1);
         }
-		System.out.println(latex);
 		return latex;
 	}
     public static String blockAtomAddBrace(String latex,String regex,int braceflag){
