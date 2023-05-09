@@ -54,8 +54,6 @@ public class AtomToOMath {
     public  String atomToOMathStr(Atom atom,String oMathStr) {
     	if(atom==null||atom.getAnalType().equals(2)) return oMathStr;
     	if(atom.getAnalType().equals(0)&&(atom.getAtomBEs()==null||atom.getAtomBEs().size()<1)){
-    		//if(oMathStr.length()>mtmr.length()&&oMathStr.substring(oMathStr.length()-mtmr.length()).equals(mtmr)) oMathStr=oMathStr.substring(0, oMathStr.length()-mtmr.length())+atomNameStandardized(atom.getAtomName())+mtmr;
-    		//else oMathStr=oMathStr+mrmt+atomNameStandardized(atom.getAtomName())+mtmr;
 			oMathStr=oMathStr+mrmt+atomNameStandardized(atom.getAtomName())+mtmr;
     		return oMathStr;
     	}
@@ -261,22 +259,10 @@ public class AtomToOMath {
 	}
 	//分数增加字体为小三字体
 	public static String oMathStrAddFracFontStyle(String oMathStr){
-        //String regex="<m:f>.*?</m:f>";
         String style="<w:rPr><w:sz w:val=\"30\"/></w:rPr>";
         return oMathStrAddStyle(oMathStr,"<m:f>","</m:f>",style);
     }
 
-    //不同结构增加样式
-   /* public static String oMathStrAddStyle(String oMathStr,String regex,String style){
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher=pattern.matcher(oMathStr);
-        while (matcher.find()){
-            String matchStr = matcher.group();
-            String newMatchStr=matchStr.replace("<m:r><m:t>","<m:r>"+style+"<m:t>");
-            oMathStr=oMathStr.replace(matchStr,newMatchStr);
-        }
-        return oMathStr;
-    }*/
 	//不同结构增加样式
 	public static String oMathStrAddStyle(String oMathStr,String beginStr,String endStr,String style){
 		List<Map<String,Integer>> beginEndIndex=new ArrayList<Map<String, Integer>>();

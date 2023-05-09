@@ -127,9 +127,6 @@ public class AtomAnalysis {
 				   step=step==-1?1:step+1;
 				   if(styleLength>0){
 					   atomNext=i+step>=atoms.size()||i+step<0?null:atoms.get(i+step);
-					  // AtomBE atomBENewTmp=MyJsonUtil.fromJson(MyJsonUtil.toJson(atomNext.getAtomBEs().get(0)), AtomBE.class);
-						 /*  atomBEs.add(atomBENewTmp);
-						   atom.setAtomBEs(atomBEs);*/ //暂不解析
 					   atomNext.setAnalType(2);
 					   step=step==-1?1:step+1;
 				   }
@@ -197,14 +194,6 @@ public class AtomAnalysis {
 						for(int blockStep=i+step+1;blockStep<atoms.size();blockStep++){
 						 	 Atom atomNextTmp= blockStep>=atoms.size()||blockStep<0?null:atoms.get(blockStep);
 						 	 if(atomNextTmp!=null&&atomNextTmp.getAnalType()!=null&&atomNextTmp.getAnalType().equals(2)) continue;
-                            /* message=atomToOMathAtom(atomNextTmp);
-                             if(atomNextTmp.getAnalType()!=null&&atomNextTmp.getAnalType().equals(1)&&atomNextTmp.getAtomName()!=null){
-                                 AtomRule atomRuleNext=atomDic.get(atomNextTmp.getAtomName());
-                                 if(atomRuleNext==null) return "ERROR:解析标记:["+atomNextTmp.getAtomName()+"]没有对应的解析规则";
-                                 atomNextTmp.setAtomRule(atomRuleNext);
-                             }
-                             if(!message.equals("SUCCESS")) return message;
-                             */
 						 	 if(atomNextTmp!=null&&atomNextTmp.getAnalType().equals(1)&&atomNextTmp.getAtomName()!=null){
 								 AtomRule atomNextTmpRule=atomDic.get(atomNextTmp.getAtomName());
 								 if(atomNextTmpRule==null) return "ERROR:解析标记:["+atom.getAtomName()+"]没有对应的解析规则";
@@ -465,7 +454,6 @@ public class AtomAnalysis {
 					}
 					atomNext.setAnalType(2);
 					step=step==-1?1:step+1;
-					continue;
 				}else {
 					if(atomNext.getAnalType()!=null&&!atomNext.getAnalType().equals(2)) {
 						Atom nextAtomNew = MyJsonUtil.fromJson(MyJsonUtil.toJson(atomNext), Atom.class);
@@ -477,7 +465,6 @@ public class AtomAnalysis {
 					}
 					atomNext.setAnalType(2);
 					step=step==-1?1:step+1;
-					continue;
 				}
 		   }
 	   }
@@ -495,22 +482,18 @@ public class AtomAnalysis {
 				if(atomRuleSeriesAtomBE.getAtom()==null||atomRuleSeriesAtomBE.getAtom().getAtomName()==null){
 					if(currentAtom.getAtomBEs()!=null&&currentAtom.getAtomBEs().get(0).getBegin().equals(atomRuleSeriesAtomBE.getBegin())){
 						step=step==-1?1:step+1;
-						continue;
 					}
 				}else {
 					if(currentAtom.getAtomName()!=null&&atomRuleSeriesAtomBE.getAtom()!=null&&currentAtom.getAtomName().equals(atomRuleSeriesAtomBE.getAtom().getAtomName())){
 						step=step==-1?1:step+1;
-						continue;
 					}
 				}
 			}else {//必须匹配至少一个
 				if(atomRuleSeriesAtomBE.getAtom()==null||atomRuleSeriesAtomBE.getAtom().getAtomName()==null){
 					step=step==-1?1:step+1;
-					continue;
 				}else {
 					if(currentAtom.getAtomName()==null||!currentAtom.getAtomName().equals(atomRuleSeriesAtomBE.getAtom().getAtomName())) return false;
 					step=step==-1?1:step+1;
-					continue;
 				}
 			}
 		}
@@ -528,7 +511,6 @@ public class AtomAnalysis {
 				return message;
 			}
 			if(atomBEs.get(0).getAtom().getAtomBEs()!=null&&atomBEs.get(0).getAtom().getAtomBEs().size()>0) atom.setAtomBEs(atomBEs.get(0).getAtom().getAtomBEs());
-			//return message;
 		}
 		if(atom.getAtomBEs()!=null&&atom.getAtomBEs().size()>0){
 			List<Atom> atomChildren=atom.atomListFromAtomBEs();
