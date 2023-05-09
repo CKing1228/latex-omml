@@ -1,16 +1,16 @@
 package com.latextoword.anal;
 
-import java.util.*;
-
 import com.latextoword.atom.Atom;
 import com.latextoword.atom.AtomBE;
 import com.latextoword.common.MyJsonUtil;
+import com.latextoword.dictionary.AtomRule;
 import com.latextoword.dictionary.AtomRuleSeries;
 import com.latextoword.dictionary.MatrixStyle;
 import com.latextoword.dictionary.dicList.AtomList;
-import com.latextoword.dictionary.AtomRule;
 import com.latextoword.dictionary.dicList.AtomRuleSeriesList;
 import com.latextoword.dictionary.dicList.MatrixList;
+
+import java.util.*;
 
 //atom复制到相应父结构之下，原atom失效
 public class AtomAnalysis {

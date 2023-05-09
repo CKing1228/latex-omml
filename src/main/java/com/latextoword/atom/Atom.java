@@ -1,12 +1,12 @@
 package com.latextoword.atom;
 //元素结构
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.latextoword.dictionary.AtomRule;
 import com.latextoword.dictionary.AtomRuleSeries;
 import com.latextoword.dictionary.MatrixStyle;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Atom {
     private Integer atomId;

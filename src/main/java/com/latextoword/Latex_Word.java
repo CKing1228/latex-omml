@@ -5,7 +5,10 @@ import com.latextoword.anal.AtomToOMath;
 import com.latextoword.anal.InitAtom;
 import com.latextoword.atom.Atom;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -39,13 +42,13 @@ public class Latex_Word {
         List<Atom> atoms= InitAtom.latexIntoAtomAll(latex);
         AtomAnalysis atomAnalysis=new AtomAnalysis();
         String message= atomAnalysis.atomListToOMathAtomList(atoms);
-        if(message.indexOf("ERROR")>=0){
+        if(message.contains("ERROR")){
             logger.info("[latexToWord:ERROR]:"+message);
             return "ERROR";
         }
         AtomToOMath atomToOMath = new AtomToOMath();
         String oMathStr= atomToOMath.atomToOMathStrMain(atoms);
-        if(oMathStr.indexOf("ERROR")>=0){
+        if(oMathStr.contains("ERROR")){
             logger.info("[latexToWord:ERROR]:"+oMathStr);
             return "ERROR";
         }
@@ -57,7 +60,7 @@ public class Latex_Word {
         List<Atom> atoms= InitAtom.latexIntoAtomAll(latex);
         AtomAnalysis atomAnalysis=new AtomAnalysis();
         String message= atomAnalysis.atomListToOMathAtomList(atoms);
-        if(message.indexOf("ERROR")>=0){
+        if(message.contains("ERROR")){
             return message;
         }
         AtomToOMath atomToOMath = new AtomToOMath();

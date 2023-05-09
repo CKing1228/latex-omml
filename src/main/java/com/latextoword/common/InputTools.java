@@ -1,7 +1,6 @@
 package com.latextoword.common;
 
 import java.util.LinkedHashMap;
-import java.util.Map;
 
 /**
  * @Author: maoyuwei

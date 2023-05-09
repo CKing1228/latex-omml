@@ -3,7 +3,6 @@ package com.latextoword.dictionary.dicList;
 import com.latextoword.dictionary.AtomRuleSeries;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.List;
 

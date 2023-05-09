@@ -1,15 +1,16 @@
 package com.latextoword.anal;
 
+import com.latextoword.atom.Atom;
+import com.latextoword.atom.AtomBE;
+import com.latextoword.dictionary.AtomRule;
+import com.latextoword.dictionary.AtomRuleSeries;
+import com.latextoword.dictionary.MatrixStyle;
+import com.latextoword.dictionary.OMathRule;
+import com.latextoword.dictionary.dicList.MatrixList;
+
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import com.latextoword.atom.Atom;
-import com.latextoword.atom.AtomBE;
-import com.latextoword.dictionary.*;
-import com.latextoword.dictionary.dicList.AtomList;
-import com.latextoword.dictionary.dicList.AtomRuleSeriesList;
-import com.latextoword.dictionary.dicList.MatrixList;
 
 public class AtomToOMath {
 

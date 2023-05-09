@@ -1,17 +1,17 @@
 package com.latextoword.anal;
 
+import com.latextoword.atom.Atom;
+import com.latextoword.atom.AtomBE;
+import com.latextoword.atom.AtomRegex;
+import com.latextoword.dictionary.AtomChar;
+import com.latextoword.dictionary.dicList.AtomCharList;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import com.latextoword.atom.Atom;
-import com.latextoword.atom.AtomBE;
-import com.latextoword.dictionary.AtomChar;
-import com.latextoword.dictionary.dicList.AtomCharList;
-import com.latextoword.atom.AtomRegex;
 //以AtomChar里面的字符结构为块级，一层层块级化
 public class InitAtom {
 private static Hashtable<String, AtomChar> atomCharMap;
