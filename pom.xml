@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.latextoword</groupId>
-  <artifactId>latex-word</artifactId>
-  <version>1.0.41</version>
+  <artifactId>latex-word-poi</artifactId>
+  <version>1.0.42</version>
   <packaging>jar</packaging>
 
   <name>latextoword</name>
