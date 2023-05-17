@@ -259,7 +259,7 @@ public class AtomToOMath {
 	}
 	//分数增加字体为小三字体
 	public static String oMathStrAddFracFontStyle(String oMathStr){
-        String style="<w:rPr><w:sz w:val=\"30\"/></w:rPr>";
+        String style="";
         return oMathStrAddStyle(oMathStr,"<m:f>","</m:f>",style);
     }
 

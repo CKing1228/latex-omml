@@ -6,11 +6,11 @@ import com.latextoword.atom.AtomBE;
 import java.util.Arrays;
 
 public  enum OMathRule {
-	CFRAC(7,"\\cfrac",new Atom(7,"<m:f><m:fPr><m:ctrlPr><w:rPr><w:sz w:val=\"30\"/></w:rPr></m:ctrlPr></m:fPr>","<m:num>",new Atom(),"</m:num>","<m:den>",new Atom(),"</m:den></m:f>"),1),
-	OVER(8,"\\over",new Atom(11,"<m:f><m:fPr><m:ctrlPr><w:rPr><w:sz w:val=\"30\"/></w:rPr></m:ctrlPr></m:fPr>","<m:num>",new Atom(),"</m:num>","<m:den>",new Atom(),"</m:den></m:f>"),1),
-    DFRAC(9,"\\dfrac",new Atom(9,"<m:f><m:fPr><m:ctrlPr><w:rPr><w:sz w:val=\"30\"/></w:rPr></m:ctrlPr></m:fPr>","<m:num>",new Atom(),"</m:num>","<m:den>",new Atom(),"</m:den></m:f>"),1),
+	CFRAC(7,"\\cfrac",new Atom(7,"<m:f><m:fPr><m:ctrlPr></m:ctrlPr></m:fPr>","<m:num>",new Atom(),"</m:num>","<m:den>",new Atom(),"</m:den></m:f>"),1),
+	OVER(8,"\\over",new Atom(11,"<m:f><m:fPr><m:ctrlPr></m:ctrlPr></m:fPr>","<m:num>",new Atom(),"</m:num>","<m:den>",new Atom(),"</m:den></m:f>"),1),
+    DFRAC(9,"\\dfrac",new Atom(9,"<m:f><m:fPr><m:ctrlPr></m:ctrlPr></m:fPr>","<m:num>",new Atom(),"</m:num>","<m:den>",new Atom(),"</m:den></m:f>"),1),
 	SQRT(10,"\\sqrt",new Atom(10,"<m:rad>","<m:deg>",new Atom("<m:radPr><m:degHide m:val=\"on\"/></m:radPr>",1),"</m:deg>","<m:e>",new Atom(),"</m:e></m:rad>"),1),
-	FRAC(11,"\\frac",new Atom(11,"<m:f><m:fPr><m:ctrlPr><w:rPr><w:sz w:val=\"30\"/></w:rPr></m:ctrlPr></m:fPr>","<m:num>",new Atom(),"</m:num>","<m:den>",new Atom(),"</m:den></m:f>"),1),
+	FRAC(11,"\\frac",new Atom(11,"<m:f><m:fPr><m:ctrlPr></m:ctrlPr></m:fPr>","<m:num>",new Atom(),"</m:num>","<m:den>",new Atom(),"</m:den></m:f>"),1),
     BEGIN(12,"\\begin",new Atom(12,"<m:d>","<m:dPr>",new Atom(""),"</m:dPr><m:e><m:m><m:mPr><m:mcs><m:mc><m:mcPr><m:count m:val=\"3\"/><m:mcJc m:val=\"left\"/></m:mcPr></m:mc></m:mcs></m:mPr><m:mr><m:e>"),1),
     END(13,"\\end",new Atom(13,"</m:e></m:mr></m:m></m:e></m:d>","",new Atom(),""),1),
     QQUAD(14,"\\qquad",new Atom(14,"<m:r><m:t>    </m:t></m:r>"),0),
@@ -212,14 +212,14 @@ public  enum OMathRule {
     VARTRIANGLE(197,"\\vartriangle",new Atom(197,"<m:r><m:t>△</m:t></m:r>"),0),
     L_AMBDA(198,"\\Lambda",new Atom(198,"<m:r><m:t>Λ</m:t></m:r>"),0),
     NU(199,"\\nu",new Atom(199,"<m:r><m:t>ν</m:t></m:r>"),0),
-	TFRAC(200,"\\tfrac",new Atom(200,"<m:f><m:fPr><m:ctrlPr><w:rPr><w:sz w:val=\"30\"/></w:rPr></m:ctrlPr></m:fPr>","<m:num>",new Atom(),"</m:num>","<m:den>",new Atom(),"</m:den></m:f>"),1),
+	TFRAC(200,"\\tfrac",new Atom(200,"<m:f><m:fPr><m:ctrlPr></m:ctrlPr></m:fPr>","<m:num>",new Atom(),"</m:num>","<m:den>",new Atom(),"</m:den></m:f>"),1),
     CENTERDOT(201,"\\centerdot",new Atom(201,"<m:r><m:t>·</m:t></m:r>"),0),
     T_HETA(202,"\\Theta",new Atom(202,"<m:r><m:t>Θ</m:t></m:r>"),0),
     GG(203,"\\gg",new Atom(203,"<m:r><m:t>≫</m:t></m:r>"),0),
     LL(204,"\\ll",new Atom(204,"<m:r><m:t>≪</m:t></m:r>"),0),
-	BIGCIRC(205,"\\bigcirc",new Atom(205,"<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><w:rPr><w:rFonts w:ascii=\"MS Gothic\" w:eastAsia=\"MS Gothic\" w:hAnsi=\"MS Gothic\" w:cs=\"MS Gothic\" w:hint=\"eastAsia\"/></w:rPr><m:t>◯</m:t> </m:r> "),0),
+	BIGCIRC(205,"\\bigcirc",new Atom(205,"<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t>◯</m:t> </m:r> "),0),
 	BACKSIM(206,"\\backsim",new Atom(206,"<m:r><m:t>∽</m:t></m:r>"),0),
-    BIGSTAR(207,"\\bigstar",new Atom(207,"<m:r><w:sym w:font=\"Wingdings 2\" w:char=\"F0E9\"/></m:r>"),0),
+    BIGSTAR(207,"\\bigstar",new Atom(207,"<m:r><m:t>★</m:t></m:r>"),0),
     SMALL(208,"\\small",new Atom(207,"<m:r><m:t></m:t></m:r>"),0),//暂且如此
     VARTHETA(209,"\\vartheta",new Atom(209,"<m:r><m:t>ϑ</m:t></m:r>"),0),
     BLACKTRIANGLE(210,"\\blacktriangle",new Atom(210,"<m:r><m:t>▲</m:t></m:r>"),0),
@@ -229,7 +229,7 @@ public  enum OMathRule {
 	EMPTYSET(214,"\\emptyset",new Atom(214,"<m:r><m:t>∅</m:t></m:r>"),0),
     VARGAMMA(215,"\\varGamma",new Atom(215,"<m:r><m:t>Γ</m:t></m:r>"),0),
     LOZENGE(216,"\\lozenge",new Atom(216,"<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t>◊</m:t> </m:r>"),0),
-    FROWN(217,"\\frown",new Atom(217,"<m:r><w:rPr><w:rFonts w:eastAsia=\"等线\"/></w:rPr><m:t>⌒</m:t></m:r>"),0),
+    FROWN(217,"\\frown",new Atom(217,"<m:r><m:t>⌒</m:t></m:r>"),0),
 	GT(218,"\\gt",new Atom(218,"<m:r><m:t>&gt;</m:t></m:r>"),0),
 	LT(219,"\\lt",new Atom(219,"<m:r><m:t>&lt;</m:t></m:r>"),0),
 	ZETA(219,"\\zeta",new Atom(219,"<m:r><m:t>ζ</m:t></m:r>"),0),
@@ -240,13 +240,13 @@ public  enum OMathRule {
 	DIVIDEONTIMES(224,"\\divideontimes",new Atom(224,"<m:r><m:t>⋇</m:t></m:r>"),0),
 	STAR(225,"\\star",new Atom(225,"<m:r><m:t>⋆</m:t></m:r>"),0),
 	SUBSETNEQ(226,"\\subsetneq",new Atom(226,"<m:r><m:t>⊊</m:t></m:r>"),0),
-	URCORNER(227,"\\urcorner",new Atom(227,"<m:r><w:rPr><w:position w:val=\"6\"/></w:rPr><m:t>¬</m:t> </m:r>"),0),
-	TRIANGLERIGHT(228,"\\triangleright",new Atom(228,"<m:r><m:rPr><m:sty m:val=\"p\"/><w:rFonts w:ascii=\"Cambria Math\" w:eastAsia=\"MS Gothic\" w:hAnsi=\"Cambria Math\" w:hint=\"eastAsia\"/></m:rPr><m:t>▻</m:t> </m:r>"),0),
-	TRIANGLELEFT(229,"\\triangleleft",new Atom(229,"<m:r><m:rPr><m:sty m:val=\"p\"/><w:rFonts w:ascii=\"Cambria Math\" w:eastAsia=\"MS Gothic\" w:hAnsi=\"Cambria Math\" w:hint=\"eastAsia\"/></m:rPr><m:t>◁</m:t> </m:r>"),0),
-	TRIANGLEDOWN(230,"\\triangledown",new Atom(230,"<m:r><m:rPr><m:sty m:val=\"p\"/><w:rFonts w:ascii=\"Cambria Math\" w:eastAsia=\"MS Gothic\" w:hAnsi=\"Cambria Math\"/></m:rPr><m:t>∇</m:t></m:r>"),0),
+	URCORNER(227,"\\urcorner",new Atom(227,"<m:r><m:t>¬</m:t> </m:r>"),0),
+	TRIANGLERIGHT(228,"\\triangleright",new Atom(228,"<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t>▹</m:t> </m:r>"),0),
+	TRIANGLELEFT(229,"\\triangleleft",new Atom(229,"<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t>◃</m:t> </m:r>"),0),
+	TRIANGLEDOWN(230,"\\triangledown",new Atom(230,"<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t>∇</m:t></m:r>"),0),
 	CHECKMARK(231,"\\checkmark",new Atom(231,"<m:r><m:t>✓</m:t></m:r>"),0),
 	AST(232,"\\ast",new Atom(232,"<m:r><m:t>*</m:t></m:r>"),0),
-	CIRCLEDCIRC(233,"\\circledcirc",new Atom(233,"<m:r><m:rPr><m:sty m:val=\"p\"/><w:rFonts w:ascii=\"Cambria Math\" w:eastAsia=\"MS UI Gothic\" w:hAnsi=\"Cambria Math\" w:cs=\"MS Gothic\" w:hint=\"eastAsia\"/></m:rPr><m:t>◎</m:t> </m:r>"),0),
+	CIRCLEDCIRC(233,"\\circledcirc",new Atom(233,"<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t>⊚</m:t> </m:r>"),0),
 	THICKAPPROX(234,"\\thickapprox",new Atom(234,"<m:r><m:t>≈</m:t></m:r>"),0),
 	PREC(235,"\\prec",new Atom(235,"<m:r><m:t>≺</m:t></m:r>"),0),
 	LBRACE(236,"\\lbrace",new Atom(236,"<m:r><m:t>{</m:t></m:r>"),0),
@@ -255,10 +255,10 @@ public  enum OMathRule {
 	RDDOTS(239,"\\rddots",new Atom(239,"<m:r><m:t>⋰</m:t></m:r>"),0),
 	DDOTS(240,"\\ddots",new Atom(240,"<m:r><m:t>⋱</m:t></m:r>"),0),
 	A_ND(241,"\\And",new Atom(241,"<m:r><m:t>&#38;</m:t></m:r>"),0),
-	BIGODOT(242,"\\bigodot",new Atom(242,"<m:r><m:rPr><m:sty m:val=\"p\"/><w:rFonts w:ascii=\"Cambria Math\" w:eastAsia=\"等线\" w:hAnsi=\"Cambria Math\" w:hint=\"eastAsia\"/></m:rPr><m:t>☉</m:t> </m:r>"),0),
-	BLACKLOZENGE(243,"\\blacklozenge",new Atom(243,"<m:r><m:rPr><m:sty m:val=\"p\"/><w:rFonts w:ascii=\"Cambria Math\" w:eastAsia=\"等线\" w:hAnsi=\"Cambria Math\" w:hint=\"eastAsia\"/></m:rPr><m:t>◆</m:t> </m:r>"),0),
+	BIGODOT(242,"\\bigodot",new Atom(242,"<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t>⨀</m:t> </m:r>"),0),
+	BLACKLOZENGE(243,"\\blacklozenge",new Atom(243,"<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t>◆</m:t> </m:r>"),0),
 	DIAMOND(244,"\\diamond",new Atom(244,"<m:r><m:t>◊</m:t></m:r>"),0),
-	DIAMONDSUIT(245,"\\diamondsuit",new Atom(245,"<m:r><m:rPr><m:sty m:val=\"p\"/><w:rFonts w:ascii=\"Segoe UI Symbol\" w:hAnsi=\"Segoe UI Symbol\" w:cs=\"Segoe UI Symbol\"/></m:rPr><m:t>♢</m:t> </m:r>"),0),
+	DIAMONDSUIT(245,"\\diamondsuit",new Atom(245,"<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t>♢</m:t> </m:r>"),0),
 	VAR_DELTA(246,"\\varDelta",new Atom(246,"<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t>∆</m:t></m:r>"),0),
 	SEARROW(247,"\\searrow",new Atom(247,"<m:r><m:t>↘</m:t></m:r>"),0),
 	SWARROW(248,"\\swarrow",new Atom(248,"<m:r><m:t>↙</m:t></m:r>"),0),
@@ -322,8 +322,8 @@ public  enum OMathRule {
     UNDERRIGHTARROW(425,"\\underrightarrow",new Atom(425,"<m:groupChr><m:groupChrPr><m:chr m:val=\"→\"/></m:groupChrPr>","<m:e>",new Atom(),"</m:e></m:groupChr>"),1),
 	V_ERB(426,"\\Verb",new Atom(426,"",Arrays.asList(new AtomBE("<m:r><m:t></m:t></m:r>",new Atom(),"<m:r><m:t></m:t></m:r>"))),1),
 	VERB(427,"\\verb",new Atom(427,"<m:r><m:t></m:t></m:r>"),0),
-	BOXED(428,"\\boxed",new Atom(428,"<m:borderBox><m:borderBoxPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsia=\"等线\" w:hAnsi=\"Cambria Math\"/><w:i/></w:rPr></m:ctrlPr></m:borderBoxPr>","<m:e>",new Atom(),"</m:e></m:borderBox>"),1),
-	FBOX(429,"\\fbox",new Atom(429,"<m:borderBox><m:borderBoxPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsia=\"等线\" w:hAnsi=\"Cambria Math\"/><w:i/></w:rPr></m:ctrlPr></m:borderBoxPr>","<m:e>",new Atom(),"</m:e></m:borderBox>"),1),
+	BOXED(428,"\\boxed",new Atom(428,"<m:borderBox><m:borderBoxPr><m:ctrlPr></m:ctrlPr></m:borderBoxPr>","<m:e>",new Atom(),"</m:e></m:borderBox>"),1),
+	FBOX(429,"\\fbox",new Atom(429,"<m:borderBox><m:borderBoxPr><m:ctrlPr></m:ctrlPr></m:borderBoxPr>","<m:e>",new Atom(),"</m:e></m:borderBox>"),1),
 
 
 
@@ -331,22 +331,22 @@ public  enum OMathRule {
 
 	BF(1000,"\\bf",new Atom(1000,"","<m:r><m:rPr><m:sty m:val=\"b\"/></m:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
 	MATHBF(1001,"\\mathbf",new Atom(1001,"","<m:r><m:rPr><m:sty m:val=\"b\"/></m:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
-	MATHRM(1002,"\\mathrm",new Atom(1002,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><w:rPr><w:rFonts w:ascii=\"Times New Roman\" w:hAnsi=\"Times New Roman\" w:cs=\"Times New Roman\"/></w:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
-	RM(1003,"\\rm",new Atom(1003,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><w:rPr><w:rFonts w:ascii=\"Times New Roman\" w:hAnsi=\"Times New Roman\" w:cs=\"Times New Roman\"/></w:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
+	MATHRM(1002,"\\mathrm",new Atom(1002,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
+	RM(1003,"\\rm",new Atom(1003,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
     BOLDSYMBOL(1004,"\\boldsymbol",new Atom(1004,"","<m:r><m:rPr><m:sty m:val=\"b\"/></m:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
-    COLOR(1005,"\\color",new Atom(1005,"","<m:r><w:rPr><w:color w:val=\"FF0000\"/></w:rPr><m:t></m:t></m:r>",1,new Atom("\u200B"),"<m:r><m:t></m:t> </m:r>"),1),
+    COLOR(1005,"\\color",new Atom(1005,"","<m:r><m:t></m:t></m:r>",1,new Atom("\u200B"),"<m:r><m:t></m:t> </m:r>"),1),
 	TEXT(1006,"\\text",new Atom(1006,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t></m:t></m:r>",2,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
-	SF(1007,"\\sf",new Atom(1007,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><w:rPr><w:rFonts w:ascii=\"Times New Roman\" w:hAnsi=\"Times New Roman\" w:cs=\"Times New Roman\"/></w:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),//字体错误
-	MATHSF(1008,"\\mathsf",new Atom(1008,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><w:rPr><w:rFonts w:ascii=\"Times New Roman\" w:hAnsi=\"Times New Roman\" w:cs=\"Times New Roman\"/></w:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),//字体错误
-	DISPLAYSTYLE(1009,"\\displaystyle",new Atom(1009,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\"/></w:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),//字体错误
-    TEXTSTYLE(1010,"\\textstyle",new Atom(1010,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\"/></w:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),//字体错误
-    SCRIPTSTYLE(1011,"\\scriptstyle",new Atom(1011,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\"/><w:sz w:val=\"21\"/></w:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),//字体错误
-    SCRIPTSCRIPTSTYLE(1012,"\\scriptscriptstyle",new Atom(1012,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\"/><w:sz w:val=\"18\"/></w:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),//字体错误
-	TEXTRM(1013,"\\textrm",new Atom(1013,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><w:rPr><w:rFonts w:ascii=\"Times New Roman\" w:hAnsi=\"Times New Roman\" w:cs=\"Times New Roman\"/></w:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
+	SF(1007,"\\sf",new Atom(1007,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),//字体错误
+	MATHSF(1008,"\\mathsf",new Atom(1008,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),//字体错误
+	DISPLAYSTYLE(1009,"\\displaystyle",new Atom(1009,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),//字体错误
+    TEXTSTYLE(1010,"\\textstyle",new Atom(1010,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),//字体错误
+    SCRIPTSTYLE(1011,"\\scriptstyle",new Atom(1011,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),//字体错误
+    SCRIPTSCRIPTSTYLE(1012,"\\scriptscriptstyle",new Atom(1012,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),//字体错误
+	TEXTRM(1013,"\\textrm",new Atom(1013,"","<m:r><m:rPr><m:sty m:val=\"p\"/></m:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
 	TEXTIT(1014,"\\textit",new Atom(1014,"","<m:r><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
-	_LARGE(1015,"\\Large",new Atom(1015,"","<m:r><w:rPr><w:sz w:val=\"30\"/></w:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
-	LARGE(1016,"\\large",new Atom(1016,"","<m:r><w:rPr><w:sz w:val=\"30\"/></w:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
-	HUGE(1017,"\\huge",new Atom(1017,"","<m:r><w:rPr><w:sz w:val=\"40\"/></w:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
+	_LARGE(1015,"\\Large",new Atom(1015,"","<m:r><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
+	LARGE(1016,"\\large",new Atom(1016,"","<m:r><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
+	HUGE(1017,"\\huge",new Atom(1017,"","<m:r><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
 	MATHCAL(1018,"\\mathcal",new Atom(1018,"","<m:r><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t></m:r>"),1),//错误字体
 	TEXTBF(1019,"\\textbf",new Atom(1019,"","<m:r><m:rPr><m:sty m:val=\"b\"/></m:rPr><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),//错误字体
     MATHBB(1020,"\\mathbb",new Atom(1020,"","<m:r><m:t></m:t></m:r>",1,new Atom(),"<m:r><m:t></m:t> </m:r>"),1),
