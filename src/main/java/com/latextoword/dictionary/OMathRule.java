@@ -513,6 +513,8 @@ public  enum OMathRule {
 	_VARSUBSETNEQQ(2157,"\\varsubsetneqq",new Atom(2157,"<m:r><m:t>&#x2ACB;</m:t></m:r>"),0),
 	_EXISTS(2158,"\\exists",new Atom(2158,"<m:r><m:t>&#x2203;</m:t></m:r>"),0),
 	_NEXISTS(2159,"\\nexists",new Atom(2159,"<m:r><m:t>&#x2204;</m:t></m:r>"),0),
+	_SUBSETEQQ(2160,"\\subseteqq",new Atom(2160,"<m:r><m:t>⫅</m:t></m:r>"),0),
+	_SUPSETEQQ(2161,"\\supseteqq",new Atom(2161,"<m:r><m:t>⫆</m:t></m:r>"),0),
 
 	;
 	private Integer  oMathId;

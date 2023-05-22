@@ -506,6 +506,8 @@ public enum AtomRule {
 	_VARSUBSETNEQQ(2157,"\\varsubsetneqq",new Atom(2157,"\\varsubsetneqq"),0,0,0,0,OMathRule._VARSUBSETNEQQ),
 	_EXISTS(2158,"\\exists",new Atom(2158,"\\exists"),0,0,0,0,OMathRule._EXISTS),
 	_NEXISTS(2159,"\\nexists",new Atom(2159,"\\nexists"),0,0,0,0,OMathRule._NEXISTS),
+	_SUBSETEQQ(2160,"\\subseteqq",new Atom(2160,"\\subseteqq"),0,0,0,0,OMathRule._SUBSETEQQ),
+	_SUPSETEQQ(2161,"\\supseteqq",new Atom(2161,"\\supseteqq"),0,0,0,0,OMathRule._SUPSETEQQ),
 
 
 	;

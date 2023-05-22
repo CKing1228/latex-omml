@@ -46,15 +46,15 @@ public class Latex_Word {
         String message = atomAnalysis.atomListToOMathAtomList(atoms);
         if (message.contains("ERROR")) {
             logger.info("[latexToWord:ERROR]:" + message);
-            return "ERROR";
+            return message;
         }
         AtomToOMath atomToOMath = new AtomToOMath();
         String oMathStr = atomToOMath.atomToOMathStrMain(atoms);
         if (oMathStr.contains("ERROR")) {
             logger.info("[latexToWord:ERROR]:" + oMathStr);
-            return "ERROR";
+            return message;
         }
-        if (!checkOmmlFormat(oMathStr)) return "ERROR";
+        if (!checkOmmlFormat(oMathStr)) return "标签不闭合";
         return oMathStr;
     }
 
