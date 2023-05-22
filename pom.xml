@@ -4,7 +4,7 @@
 
   <groupId>com.latextoword</groupId>
   <artifactId>latex-word-poi</artifactId>
-  <version>1.0.42</version>
+  <version>1.0.43</version>
   <packaging>jar</packaging>
 
   <name>latextoword</name>
